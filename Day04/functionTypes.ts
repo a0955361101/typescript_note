@@ -80,19 +80,19 @@ additionA = function (param1: number, param2: number) {
 // 若定義的函式不回傳值的話，不管有沒有被註記，型別推論結果會被認定為 void
 
 // 函式主動回傳 undefined
-let doesItWork1 = function doesItWork1() {
+const doesItWork1 = function doesItWork1() {
     return undefined
 }
 // 函式輸出型別註記為 undefined ， 也回傳 undefined
-let doesItWork2 = function doesItWork2(): undefined {
+const doesItWork2 = function doesItWork2(): undefined {
     return undefined
 }
 // 函式輸出型別註記為 undefined ， 但不回傳任何東西
 // 這裡會提示說若函式宣告非 any 或 void 必須有回傳值
-let doesItWork3 = function doesItWork3(): undefined {
+const doesItWork3 = function doesItWork3(): undefined {
     // Empty and returns nothing
 }
 // 函式輸出型別註記為 void ， 但回傳 undefined
-let doesItWork4 = function doesItWork4(): void {
+const doesItWork4 = function doesItWork4(): void {
     return undefined
 }
