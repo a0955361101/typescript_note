@@ -2,7 +2,10 @@
     "liveServer.settings.donotShowInfoMsg": true,
     "workbench.colorTheme": "One Dark Pro Darker",
     "editor.formatOnSave": true,
+    "editor.tabSize": 4,
     "prettier.tabWidth": 4,
+    "prettier.singleQuote": true,
+    "prettier.semi": true,
     "diffEditor.ignoreTrimWhitespace": false,
     "terminal.integrated.defaultProfile.windows": "Command Prompt",
     "javascript.updateImportsOnFileMove.enabled": "always",
@@ -36,7 +39,6 @@
     "explorer.confirmDragAndDrop": false,
     "typescript.updateImportsOnFileMove.enabled": "prompt",
     "git.confirmSync": false,
-    "editor.tabSize": 4,
     "editor.fontWeight": "500",
     "[json]": {},
     "editor.tabCompletion": "on",
@@ -78,8 +80,6 @@
     "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
     //html格式化依赖  默认为none
     "vetur.format.defaultFormatter.html": "js-beautify-html",
-    "prettier.singleQuote": true,
-    "prettier.semi": true,
     // eslint end
     // react
     // 当按tab键的时候，会自动提示
@@ -111,10 +111,10 @@
     // power mode 插件配置
     "powermode.enabled": true, //启动效果
     // "powermode.presets": "flames", // 火
-    // "powermode.presets": "exploding-rift", // 爆炸
+    "powermode.presets": "exploding-rift", // 爆炸
     // "powermode.presets": "simple-rift", // 空間
     // "powermode.presets": "particles", // 粒子
-    "powermode.presets": "fireworks", // 煙火
+    // "powermode.presets": "fireworks", // 煙火
     // "powermode.presets": "magic", // 魔法
     // "powermode.presets": "clippy", // 迴紋針
     "powermode.shake.enabled": false, // 关闭代码抖动 「建议关闭，开启容易眼睛花」
