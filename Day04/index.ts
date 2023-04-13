@@ -23,3 +23,34 @@ let parsedJSON2 = <{ hello: string, luckyNumber: number; }>JSON.parse(aJSONStrin
 let parsedJSON3: { hello: string, luckyNumber: number; } = JSON.parse(aJSONString);
 
 let parsedJSON4 = JSON.parse(aJSONString); // => any
+
+// 函式型別的覆寫
+// 原本的 addition : 型別為 (number, number) => number
+// 覆寫的 addition : 型別為 (number, number) => number
+addition = (param1: number, param2: number) => param2 + param1; // <- 交換位子
+
+// 錯誤的覆寫 addition : 參數型別錯誤 (string, string) => string
+// addition = (param1: string, param2: string) => param1 + param2;
+
+// 錯誤的覆寫 addition : 參數型別錯誤 (number, number) => void
+// addition = (param1: number, param2: number) => {
+//     param1 + param2;
+// };
+// 結論: 格式一但錯誤就不能被覆寫
+
+// 函式不回傳值的狀態：void
+// 若定義的函式不回傳值的話，不管有沒有被註記，型別推論結果會被認定為 void
+
+// 函式主動回傳 undefined
+let doesItWork1 = () => undefined;
+
+// 函式輸出型別註記為 undefined ，也回傳 undefined
+let doesItWork2 = (): undefined => undefined;
+
+// 函式輸出型別註記為 undefined ，但不回傳任何東西
+// let doesItWork3 = ():undefined => {
+// Empty and returns nothing
+// }
+
+// 函式輸出型別註記為 void ，但回傳 undefined
+let doesItWork4 = (): void => undefined;
