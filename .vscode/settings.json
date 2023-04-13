@@ -10,8 +10,8 @@
     // 修改注释颜色
     "editor.tokenColorCustomizations": {
         "comments": {
-            // "fontStyle": "bold",
-            // "foreground": "#82e0aa"
+            "fontStyle": "bold",
+            "foreground": "#888"
         }
     },
     // 配置文件类型识别
@@ -41,11 +41,10 @@
     "[json]": {},
     "editor.tabCompletion": "on",
     "vsicons.projectDetection.autoReload": true,
-    // // "editor.fontFamily": "Monaco, 'Courier New', monospace, Meslo LG M for Powerline",
+    "editor.fontFamily": "Consolas",
     "[html]": {
         "editor.defaultFormatter": "vscode.html-language-features"
     },
-    // // "editor.fontSize": 16,
     "debug.console.fontSize": 14,
     "vsicons.dontShowNewVersionMessage": true,
     "editor.minimap.enabled": true,
@@ -54,7 +53,6 @@
     // eslint配置项，保存时自动修复错误
     "editor.codeActionsOnSave": {
         "source.fixAll": true
-        // "source.fixAll": false
     },
     "vetur.ignoreProjectWarning": true,
     // 让vetur使用vs自带的js格式化工具
@@ -71,15 +69,17 @@
     },
     "typescript.format.semicolons": "insert",
     "[typescript]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
+        "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
     },
     // // 默认使用prettier格式化支持的文件
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "prettier.jsxBracketSameLine": true,
     // 函数前面加个空格
-    "javascript.format.insertSpaceBeforeFunctionParenthesis": false,
+    "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+    //html格式化依赖  默认为none
+    "vetur.format.defaultFormatter.html": "js-beautify-html",
     "prettier.singleQuote": true,
-    "prettier.semi": false,
+    "prettier.semi": true,
     // eslint end
     // react
     // 当按tab键的时候，会自动提示
@@ -107,5 +107,18 @@
     "typescript.locale": "zh-TW",
     "[vue]": {
         "editor.defaultFormatter": "Vue.volar"
-    }
+    },
+    // power mode 插件配置
+    "powermode.enabled": true, //启动效果
+    // "powermode.presets": "flames", // 火
+    // "powermode.presets": "exploding-rift", // 爆炸
+    // "powermode.presets": "simple-rift", // 空間
+    // "powermode.presets": "particles", // 粒子
+    "powermode.presets": "fireworks", // 煙火
+    // "powermode.presets": "magic", // 魔法
+    // "powermode.presets": "clippy", // 迴紋針
+    "powermode.shake.enabled": false, // 关闭代码抖动 「建议关闭，开启容易眼睛花」
+    "powermode.combo.counterEnabled": "hide",
+    "powermode.shake.intensity": 0,
+    "powermode.combo.counterSize": 0,
 }
