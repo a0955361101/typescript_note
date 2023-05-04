@@ -11,3 +11,9 @@ for (let i = 0; i < nums.length; i++) {
   const originalValue = nums[i];
   doubledNums.push(originalValue * 2);
 }
+
+numbers.push(666); // => OK
+
+// numbers.push('666'); // 字串 TS 報錯
+
+let BMWMotor = ["BMW", ""];
