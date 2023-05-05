@@ -16,4 +16,29 @@ numbers.push(666); // => OK
 
 // numbers.push('666'); // 字串 TS 報錯
 
-let BMWMotor = ["BMW", ""];
+// 宣告型別
+// 元組型別註記元素個數必須固定,格式也必須完全吻合
+type typeName = [string, string, string, Date];
+
+// 不同方式進行型別註記
+let BMWMotor: typeName = ["BMW", "motorcycle", "silver", new Date(2023, 1, 26)];
+let BMWMotor2 = [
+  "BMW",
+  "motorcycle",
+  "silver",
+  new Date(2023, 1, 26),
+] as typeName;
+let JaguarOffRoad = <typeName>[
+  "Jaguar",
+  "off-road",
+  "royal-bule",
+  new Date(2022, 1, 26),
+];
+let ToyotaRv: [string, string, string, Date] = [
+  "Toyota",
+  "recreational",
+  "ivory-white",
+  new Date(2021, 1, 26),
+];
+
+// let v1: typeName = [new Date(2000, 1, 26), "0", "1", "2"]; // 這樣就會報錯 因為格式不符合 [string, string, string, Date]
