@@ -111,10 +111,10 @@
     // power mode 插件配置
     "powermode.enabled": true, //启动效果
     // "powermode.presets": "flames", // 火
-    "powermode.presets": "exploding-rift", // 爆炸
+    // "powermode.presets": "exploding-rift", // 爆炸
     // "powermode.presets": "simple-rift", // 空間
     // "powermode.presets": "particles", // 粒子
-    // "powermode.presets": "fireworks", // 煙火
+    "powermode.presets": "fireworks", // 煙火
     // "powermode.presets": "magic", // 魔法
     // "powermode.presets": "clippy", // 迴紋針
     "powermode.shake.enabled": false, // 关闭代码抖动 「建议关闭，开启容易眼睛花」
