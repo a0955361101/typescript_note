@@ -40,3 +40,16 @@ type U = any | never;
 type MustBeNever = U & never;
 
 let acceptsNever: number = probablyThrowsError(-5);
+
+let mustThrowError = () => {
+  throw new Error("Throw new error!");
+};
+
+let mustAcceptsNever: never = mustThrowError();
+let mustAcceptsNever2: number = mustThrowError();
+// 就算函式必為 never 型別，然而變數之註記型別為 number 依舊還是被 TypeScript 認定正常，因為 number 型別跟 number | never 型別完全等效
+
+let wontThrowError = () => {
+  return 42;
+};
+// let mustAcceptsNever: never = wontThrowError() // number 不可指派給 never
