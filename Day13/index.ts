@@ -37,5 +37,5 @@ interface AccountPersonalInfo {
   gender?: string;
 }
 
-// UserAccount 是 AccountSystem 與 AccountPersonalInfo 的組合
+// UserAccount 是 AccountSystem 與 AccountPersonalInfo 的結合
 interface UserAccount extends AccountSystem, AccountPersonalInfo {}
